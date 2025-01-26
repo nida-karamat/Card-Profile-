@@ -1,0 +1,82 @@
+//import React, { useState } from 'react'
+
+/*export default function App() {
+  
+  const [text, setText] = useState('');
+  const [wordCount, setWordCount] = useState(0);
+  const [sentenceCount, setSentenceCount] = useState(0);
+  const [characterCount, setCharacterCount] = useState(0);
+  const [paragraphCount, setParagraphCount] = useState(0);
+  const [readingTime,setReadingTime]=useState('-');
+  const [longestWord,setLongestword]=useState();
+
+  const textChangeHandler = (event) => {
+    const newText = event.target.value;
+    setText(newText);
+    setWordCount(newText.split(' ').length);
+    setCharacterCount(newText.length);
+    setSentenceCount(newText.split('.').length -1);
+    setParagraphCount(newText.split('\n\n').length);
+    setLongestword(newText.split(''));
+    
+    
+  };
+  return (
+    <div className='w-full h-screen'>
+      <div className='bg-gray-400 h-1/6 p-5 text-center'>Text Analysis</div>
+      <div className='bg-zinc-900 mt-10 pt-5 mx-10 h-1/6 flex justify-around text-white'>
+        <h1>word <br/>{wordCount}</h1>
+        <h1>Sentence <br/>{sentenceCount}</h1>
+        <h1>Character <br/>{characterCount}</h1> 
+        <h1>Paragraph<br/> {paragraphCount}</h1>
+      </div>
+      <div className=' bg-red-100 mt-10 mx-10 h-1/2'> 
+      <input type='text'  name='' value={text} onChange={textChangeHandler}/>
+      </div>
+
+        <div className='bg-gray-400 mt-10 mx-10 pl-15 py-10 h-1/6 flex justify-around '>
+          <h1>Average Reading Time:{readingTime}</h1>
+          <h1>Longest word: {longestWord}</h1>
+        </div>
+      </div>
+     
+      
+     
+     
+    
+  )
+}*/
+
+import React, { useState } from 'react';
+
+function AverageReadingTime() {
+  const [text, setText] = useState('');
+  const [readingTime, setReadingTime] = useState('');
+
+  const handleTextChange = (event) => {
+    const newText = event.target.value;
+    setText(newText);
+    calculateReadingTime(newText);
+  };
+
+  const calculateReadingTime = (text) => {
+    const words = text.trim().split(/\s+/).length;
+    const readingTimeInMinutes = Math.ceil(words / 200); // 200 words per minute
+    setReadingTime(readingTimeInMinutes > 0 ? `${readingTimeInMinutes} minute${readingTimeInMinutes > 1 ? 's' : ''}` : '1 minute');
+  };
+
+  return (
+    <div className='bd-gray-400 w-full h-1/2'>
+      <textarea
+        value={text}
+        onChange={handleTextChange}
+        placeholder="Enter your text here..."
+      />
+      <p>Average Reading Time: {readingTime}</p>
+    </div>
+  );
+}
+
+
+
+
