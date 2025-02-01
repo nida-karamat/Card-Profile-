@@ -1,68 +1,73 @@
+
 import React, { useState } from 'react'
+//import { createContext } from 'react';
+//import { useContext } from 'react';
 
-export default function App() {
-  
-   var [text, setText] = useState('');
-   var [wordsCount, setWordsCount] = useState(0);
-   var [sentencesCount, setSentencesCount] = useState(0);
-   var [charactersCount, setCharactersCount] = useState(0);
-   var [paragraphsCount, setParagraphsCount] = useState(0);
-   var [readingTime, setReadingTime] = useState('-');
-   var [longestWord,setLongestword]=useState();
-   var [pronouns,setPronouns]=useState(0);
-  
+{/*import Header from './Components/Header'
+import Main from './Components/Main'
+import Footer from './Components/Footer'
+import Geeting from './Components/Geeting'
+import ProductInfo from './Components/Productinfo'
+import Props from './Components/props'
+import Weather from './Components/Weather'
+import UserStatus from './Components/UserStatus'
+import Button  from './Components/Button'
+import UseState from './Components/UseState'
+import StateExample from './Components/StateExample'
+//import Profile  from './Components/Profile'
+import Portal from './Components/Portal'
+import TodoList from './Components/TodoList'
+//import  PopupContent  from './Components/PopupContent'
+import UseEffect from './Components/UseEffect'*/}
 
-    var textChangeHandler = (event) => {
-    var newText = event.target.value;
-    setText(newText);
-    calculateReadingTime(newText);
-    setWordsCount(newText.split(' ').length);
-    setCharactersCount(newText.length);
-    setSentencesCount(newText.split('.').length -1);
-    setParagraphsCount(newText.split('\n\n').length);
-    setLongestword(newText.split('').length);
-   
-    
-    
-  };
-  const calculateReadingTime = (text) => {
-    const words = text.trim().split(/\s+/).length;
-    const readingTimeInMinutes = Math.ceil(words / 200); // 200 words per minute
-    setReadingTime(`${readingTimeInMinutes} minute${readingTimeInMinutes > 1 ? 's' : ''}`);
-  };
+//import ComA from './Components/ComA';
+import  MortgageCalculate  from './Components/MortgageCalculate'
+//import Pa from './Pa';
+  
+function App() {
 
   return (
-    <div className='w-full h-screen'>
-      <div className='bg-gray-400 py-5 p-5 text-center'>Text Analysis</div>
-      <div className='bg-zinc-900 mt-10 pt-5 mx-10 h-1/6 flex justify-around text-white'>
-        <h1>words <br/>{wordsCount}</h1>
-        <h1>Sentences <br/>{sentencesCount}</h1>
-        <h1>Characters <br/>{charactersCount}</h1> 
-        <h1>Paragraphs<br/> {paragraphsCount}</h1>
-        <h1>Pronouns <br/> {pronouns}</h1>
-   
-      </div>
-      <div className='bg-red-300 mt-10 mx-10 h-1/2'>
-      <textarea  className='textarea' value={text} onChange={textChangeHandler} placeholder="Enter your text here..." />
-      
-      </div>
-      
+    <div>
 
-        <div className='bg-gray-400  mt-10 mx-10  py-10  h-1/6 flex justify-around '>
-          <h1 >Average Reading Time:{readingTime} </h1>
-          <h1>Longest word: {longestWord}</h1>
-        </div>
-        <div className='bg-zinc-500  mt-10  py-5 pl-15 flex jsutify-around'>
-          <h1>Built By....</h1>
-         
-          <h1>About us | Contact Us</h1>
-        </div>
-      </div> 
-     
+
+      <MortgageCalculate />
     
-  )
+       
+      {/*
+            export const Data = createContext()
+    export const Data1 = createContext()
+    export const App = () => {
+      const name ='Nida';
+      const age=22;
+               <div>
+           <Data.Provider value={name}>
+            <Data1.Provider value={age}>
+                <ComA/>
+            </Data1.Provider>
+             </Data.Provider>
+               <UseEffect/>
+               <StateExample />
+              <Profile />
+              <TodoList/>
+              <Portal />
+             <UseState  count={count} onChangeHandle={()=> setCount(count+1)}/>
+            <UseState/>
+            <Header isValid={true}/>
+            <Weather/>
+            <UserStatus timeOfday="Morning"/>
+            <UserStatus loggedIn={true} isAdmin={false}/>
+            <Main />
+            <Footer />
+            <Geeting />
+            <ProductInfo />
+            <Props Name='Fiza'
+             subject='computer'
+             age='21'
+             cgpt='3+'/>
+             <Button />
+            */}
+
+    </div>
+  );
 }
-
-
-
-
+export default App;

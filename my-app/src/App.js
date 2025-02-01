@@ -21,7 +21,7 @@ import Greet from './Components/Greet';
       console.log(this.state);
     });
   }
-  regiatationhandler =(event)=>{
+  registationhandler =(event)=>{
     event.preventDefault();
     //console.log(event.target.name.value);
     const name= event.target.name.value;
@@ -35,7 +35,7 @@ import Greet from './Components/Greet';
       <div>
        { this.state.isRegister ? 
        <Greet name={this.state.name} email={this.state.email}></Greet> : 
-       <Register submit={this.regiatationhandler} showPassword={this.state.showPassword}
+       <Register submit={this.registationhandler} showPassword={this.state.showPassword}
        click={this.showPasswordHandler}></Register>}
       </div>
     );
