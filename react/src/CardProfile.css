@@ -1,0 +1,50 @@
+
+
+
+.card{
+    height: 550px;
+    width: 450px;
+    background-color: 
+    rgb(81, 61, 100);
+    margin-left: 450px;
+    margin-top: 50px;
+    border-color: #ccc;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+.pro{
+    height: 30px;
+    width: 40px;
+    border-radius: 4px;
+}
+h2{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+
+.skills{
+    background-color: rgb(15, 43, 66);
+    height: 200px;
+    margin-top: 5px;
+    
+}
+.span{
+    color: bisque;
+    margin-left: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+}
+img{
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+  

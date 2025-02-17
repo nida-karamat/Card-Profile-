@@ -1,4 +1,90 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+export const UseEffect = () => {
+     const [count ,setCount]=useState(0)
+
+     useEffect(()=>{
+        document.tilie='Count: ${count}' 
+
+
+     },[count]);
+     
+  return (
+    <div>
+        <h1>Count:{count}</h1>
+        <button onClick={()=>setCount(count+1)}>Icrement</button>
+    </div>
+  )
+}
+
+export default UseEffect;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useEffect } from "react";
+
+ const UseEffect = () => {
+
+    
+    useEffect(()=>{
+        console.log("component mounting");
+    },[]);
+
+  return (
+     <div>
+        <h1> check the console to see the message</h1>
+     </div>
+   
+
+  );
+};
+
+export default UseEffect;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React, { useState } from 'react'
 import { useEffect } from 'react'
 
 const UseEffect = () => {
@@ -27,4 +113,6 @@ const UseEffect = () => {
   )
 }
 
- export default UseEffect;
+
+
+ export default UseEffect;*/

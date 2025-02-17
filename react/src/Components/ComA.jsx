@@ -1,27 +1,26 @@
-import { useContext } from 'react';
+/*import React from 'react';
+import { useContext ,useState } from 'react';
+import {Data ,Data1}  from '../App';
+//useContext
+
+   const ComA = () => {
+     const userName=useContext(Data);
+     const Age= useContext(Data1);
+   return (
+    <div>
+      <h1>My name is {userName} and I am {Age} year old</h1>
+    </div>
+  )
+}
+
+export default ComA;
 
 
-import { Data , Data1} from '../App';
-
+//  context api props drilling
+/*import { Data , Data1} from '../App';
 
 const ComA = () => {
-
-  const userName=  useContext(Data);
-  const Age= useContext(Data1);
-  return(
-
-    <h1> 
-        MY Name is{userName} and I am {Age} tear old.
-    </h1>
-
-  );
-  
-};
- export default ComA;
-
-
- //  context api props drilling
- /*return (
+  return (
     <Data.Consumer>
         {(name)=>{
            // return <h1> {name} </h1>
@@ -38,5 +37,9 @@ const ComA = () => {
 
     </Data.Consumer>
     );
+  
+};
+ export default ComA;*/
+
           
-  }*/
+ 
